@@ -8,7 +8,7 @@ class QazvuCart extends StatelessWidget{
     const QazvuCart({super.key});
     
     @override
-    Widget build(BuildContest contest) {
+    Widget build(BuildContext context) {
         return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: AppConfig.appName,
