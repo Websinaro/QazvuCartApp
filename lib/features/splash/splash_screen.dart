@@ -42,14 +42,14 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     );
   }
   
-  void _openApp() {
+    void _openApp() {
     if(!mounted) return;
     
     Navigator.of(context).pushReplacement(
       PageRouteBuilder(
         pageBuilder: (_,__,___) => const WebViewScreen(),
         transitionDuration: const Duration(milliseconds: 350),
-        transitionBuilder: (_,animation,__,child) {
+        transitionsBuilder: (_, animation, __, child) {
           return FadeTransition(
             opacity: animation,
             child: child,
@@ -58,6 +58,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       ),
     );
   }
+
   
   @override
   void dispose() {
